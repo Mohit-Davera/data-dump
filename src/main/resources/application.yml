@@ -8,17 +8,23 @@
 #      path: /h2-console/
 #
 spring:
+  batch:
+    jdbc:
+      initialize-schema: ALWAYS
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/data_generator
     username: postgres
     password: Simform@123
   jpa:
+    defer-datasource-initialization: true
     hibernate:
       show-sql: false
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
-        default_schema: commerce
+        default_schema: company
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
+server:
+  port: 8083
