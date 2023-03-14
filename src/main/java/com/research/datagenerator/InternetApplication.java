@@ -86,7 +86,7 @@ public class InternetApplication implements CommandLineRunner {
         domainWordRepository.saveAll(domainWordList);
 
         //EmailAddress
-/*        log.info("EmailAddress");
+        log.info("EmailAddress");
         List<EmailAddress> emailAddresses = new ArrayList<>();
         for (long i = 0; i < 10000000; i++) {
             EmailAddress emailAddress = new EmailAddress();
@@ -96,11 +96,11 @@ public class InternetApplication implements CommandLineRunner {
         }
         List<EmailAddress> emailAddressList = emailAddresses.stream().distinct().toList();
         log.info("{}",emailAddressList.size());
-        emailAddressRepository.saveAll(emailAddressList);*/
+        emailAddressRepository.saveAll(emailAddressList);
 
 
         //SafeEmailAddress
-/*        log.info("SafeEmailAddress");
+        log.info("SafeEmailAddress");
         List<SafeEmailAddress> safeEmailAddresses = new ArrayList<>();
         for (long i = 0; i < 10000000; i++) {
             SafeEmailAddress safeEmailAddress = new SafeEmailAddress();
@@ -110,7 +110,7 @@ public class InternetApplication implements CommandLineRunner {
         }
         List<SafeEmailAddress> safeEmailAddressList = safeEmailAddresses.stream().distinct().toList();
         log.info("{}",safeEmailAddressList.size());
-        safeEmailAddressRepository.saveAll(safeEmailAddressList);*/
+        safeEmailAddressRepository.saveAll(safeEmailAddressList);
 
 
         //ImageCategory
@@ -130,7 +130,7 @@ public class InternetApplication implements CommandLineRunner {
 
 
         //InternetUrl
-/*        log.info("InternetUrl");
+        log.info("InternetUrl");
         List<InternetUrl> internetUrls = new ArrayList<>();
         for (long i = 0; i < 10000000; i++) {
             InternetUrl internetUrl = new InternetUrl();
@@ -140,7 +140,7 @@ public class InternetApplication implements CommandLineRunner {
         }
         List<InternetUrl> internetUrlList = internetUrls.stream().distinct().toList();
         log.info("{}",internetUrlList.size());
-        internetUrlRepository.saveAll(internetUrlList);*/
+        internetUrlRepository.saveAll(internetUrlList);
 
         //UserAgent
         log.info("UserAgent");

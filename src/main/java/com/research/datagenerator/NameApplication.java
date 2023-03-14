@@ -70,31 +70,31 @@ public class NameApplication implements CommandLineRunner {
 
 
 
-//        log.info("Name With Middle");
-//        Set<NameWithMiddle> nameWithMiddles = new HashSet<>();
-//        for (long i = 0; i < 10200000; i++) {
-//            NameWithMiddle nameWithMiddle = new NameWithMiddle();
-//            String name1 = name.nameWithMiddle();
-//            nameWithMiddle.setName(name1);
-//            nameWithMiddles.add(nameWithMiddle);
-//        }
-//        List<NameWithMiddle> nameWithMiddleList = nameWithMiddles.stream().distinct().toList();
-//        log.info("{}",nameWithMiddleList.size());
-//        nameWithMiddleRepository.saveAll(nameWithMiddleList);
+        log.info("Name With Middle");
+        Set<NameWithMiddle> nameWithMiddles = new HashSet<>();
+        for (long i = 0; i < 10200000; i++) {
+            NameWithMiddle nameWithMiddle = new NameWithMiddle();
+            String name1 = name.nameWithMiddle();
+            nameWithMiddle.setName(name1);
+            nameWithMiddles.add(nameWithMiddle);
+        }
+        List<NameWithMiddle> nameWithMiddleList = nameWithMiddles.stream().distinct().toList();
+        log.info("{}",nameWithMiddleList.size());
+        nameWithMiddleRepository.saveAll(nameWithMiddleList);
 
 
 
-//        log.info("Name");
-//        Set<com.research.datagenerator.entity.name.Name> names = new HashSet<>();
-//        for (long i = 0; i < 10000000; i++) {
-//            com.research.datagenerator.entity.name.Name name12 = new com.research.datagenerator.entity.name.Name();
-//            String name1 = name.name();
-//            name12.setName(name1);
-//            names.add(name12);
-//        }
-//        List<com.research.datagenerator.entity.name.Name> nameList = names.stream().distinct().toList();
-//        log.info("{}",nameList.size());
-//        nameRepository.saveAll(nameList);
+        log.info("Name");
+        Set<com.research.datagenerator.entity.name.Name> names = new HashSet<>();
+        for (long i = 0; i < 10000000; i++) {
+            com.research.datagenerator.entity.name.Name name12 = new com.research.datagenerator.entity.name.Name();
+            String name1 = name.name();
+            name12.setName(name1);
+            names.add(name12);
+        }
+        List<com.research.datagenerator.entity.name.Name> nameList = names.stream().distinct().toList();
+        log.info("{}",nameList.size());
+        nameRepository.saveAll(nameList);
 
 
 

@@ -5,6 +5,7 @@ import com.github.javafaker.File;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
 import com.research.datagenerator.entity.file.Extension;
+import com.research.datagenerator.entity.file.FileName;
 import com.research.datagenerator.entity.file.MimeType;
 import com.research.datagenerator.repo.file.ExtensionRepository;
 import com.research.datagenerator.repo.file.FileNameRepository;
@@ -15,8 +16,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 
 @Slf4j
@@ -58,9 +61,9 @@ public class FileApplication implements CommandLineRunner {
 
 
         //FileName
-/*        log.info("FileName");
+        log.info("FileName");
         Set<FileName> fileNames = new HashSet<>();
-        for (long i = 0; i < 100000; i++) {
+        for (long i = 0; i < 10000000; i++) {
             FileName fileName = new FileName();
             String name = file.fileName();
             fileName.setName(name);
@@ -68,7 +71,7 @@ public class FileApplication implements CommandLineRunner {
         }
         List<FileName> fileNameList = fileNames.stream().distinct().toList();
         log.info("{}",fileNameList.size());
-        fileNameRepository.saveAll(fileNameList);*/
+        fileNameRepository.saveAll(fileNameList);
 
     }
 }

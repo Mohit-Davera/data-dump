@@ -49,7 +49,7 @@ public class CountryApplication implements CommandLineRunner {
         Faker faker = new Faker(new Locale("en"));
         FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en"), new RandomService());
 
-        log.info("PromotionCodeAdjective2");
+        log.info("Capital");
         List<Capital> departments = new ArrayList<>();
         for (long i = 0; i < 10000; i++) {
             Capital businessCreditCardType = new Capital();
@@ -62,7 +62,7 @@ public class CountryApplication implements CommandLineRunner {
         log.info("{}",collect.size());
         capitalRepository.saveAll(collect);
 
-        log.info("PromotionCodeAdjective2");
+        log.info("CountryCode2");
         List<CountryCode2> countryCode2s = new ArrayList<>();
         for (long i = 0; i < 10000; i++) {
             CountryCode2 businessCreditCardType = new CountryCode2();
@@ -77,7 +77,7 @@ public class CountryApplication implements CommandLineRunner {
 
 
 
-        log.info("PromotionCodeAdjective2");
+        log.info("CountryCode3");
         List<CountryCode3> countryCode3s = new ArrayList<>();
         for (long i = 0; i < 10000; i++) {
         CountryCode3 businessCreditCardType = new CountryCode3();
@@ -90,7 +90,7 @@ public class CountryApplication implements CommandLineRunner {
         log.info("{}",collect3.size());
         countryCode3Repository.saveAll(collect3);
 
-        log.info("PromotionCodeAdjective2");
+        log.info("CountryName");
         List<CountryName> countryNames = new ArrayList<>();
         for (long i = 0; i < 10000; i++) {
             CountryName businessCreditCardType = new CountryName();
@@ -104,7 +104,7 @@ public class CountryApplication implements CommandLineRunner {
         countryNameRepository.saveAll(collect4);
 
 
-        log.info("PromotionCodeAdjective2");
+        log.info("Currency");
         List<Currency> currencies = new ArrayList<>();
         for (long i = 0; i < 10000; i++) {
             Currency businessCreditCardType = new Currency();
@@ -117,7 +117,7 @@ public class CountryApplication implements CommandLineRunner {
         log.info("{}",collect5.size());
         currencyRepository.saveAll(collect5);
 
-        log.info("PromotionCodeAdjective2");
+        log.info("CurrencyCode");
         List<CurrencyCode> currencyCodes = new ArrayList<>();
         for (long i = 0; i < 10000; i++) {
             CurrencyCode businessCreditCardType = new CurrencyCode();

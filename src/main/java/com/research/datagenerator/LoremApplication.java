@@ -35,9 +35,7 @@ public class LoremApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Faker faker = new Faker(new Locale("en"));
         FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en"), new RandomService());
-        Lorem lorem = faker.lorem();
 
         //Words
         log.info("Words");
@@ -52,19 +50,6 @@ public class LoremApplication implements CommandLineRunner {
         List<Supplemental> supplementalList = supplemental.stream().map(Supplemental::new).distinct().toList();
         log.info("{}",supplementalList.size());
         supplementalRepository.saveAll(supplementalList);
-
-        //Title
-/*        log.info("Title");
-        List<Title> titles = new ArrayList<>();
-        for (long i = 0; i < 1000000; i++) {
-            Title title = new Title();
-            String name = lorem.title();
-            title.setName(name);
-            titles.add(title);
-        }
-        List<Title> titleList = titles.stream().distinct().toList();
-        log.info("{}",titleList.size());
-        titleRepository.saveAll(titleList);*/
 
     }
 }

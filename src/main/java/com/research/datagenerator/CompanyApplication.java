@@ -70,7 +70,7 @@ public class CompanyApplication implements CommandLineRunner {
         Company company = faker.company();
 
         //Name
-/*        log.info("Company Name");
+        log.info("Company Name");
         Set<CompanyName> companyNames = new HashSet<>();
         for (long i = 0; i < 30000000; i++) {
             CompanyName companyName = new CompanyName();
@@ -81,7 +81,7 @@ public class CompanyApplication implements CommandLineRunner {
         log.info("Company Data Loaded");
         List<CompanyName> companyNameList = companyNames.stream().distinct().toList();
         companyNameRepository.saveAll(companyNameList);
-        log.info("{}",companyNameList.size());*/
+        log.info("{}",companyNameList.size());
 
 
         //BS
@@ -160,9 +160,9 @@ public class CompanyApplication implements CommandLineRunner {
 
 
         //URL - 84,04,256 - 2,00,00,000 Loop
-/*        log.info("URL");
+        log.info("URL");
         List<Url> urls = new ArrayList<>();
-        for (long i = 0; i < 20000000; i++) {
+        for (long i = 0; i < 10000000; i++) {
             Url url = new Url();
             String name = company.url();
             url.setName(name);
@@ -170,7 +170,7 @@ public class CompanyApplication implements CommandLineRunner {
         }
         List<Url> urlList = urls.stream().distinct().toList();
         log.info("{}",urlList.size());
-        urlRepository.saveAll(urlList);*/
+        urlRepository.saveAll(urlList);
     }
 }
 

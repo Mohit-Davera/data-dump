@@ -5,6 +5,7 @@ import com.github.javafaker.Book;
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
+import com.research.datagenerator.entity.book.AuthorName;
 import com.research.datagenerator.entity.book.BookTitle;
 import com.research.datagenerator.entity.book.Genre;
 import com.research.datagenerator.entity.book.Publisher;
@@ -18,6 +19,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -49,7 +51,8 @@ public class BookApplication implements CommandLineRunner {
 		Book book = faker.book();
 
 		//AuthorName
-/*		List<AuthorName> authors = new ArrayList<>();
+		log.info("AuthorName");
+		List<AuthorName> authors = new ArrayList<>();
 		for (long i = 0; i < 10000000; i++) {
 			AuthorName author = new AuthorName();
 			String name = book.author();
@@ -57,8 +60,8 @@ public class BookApplication implements CommandLineRunner {
 			authors.add(author);
 		}
 		List<AuthorName> authorList = authors.stream().distinct().toList();
+		log.info("{}",authorList.size());
 		authorRepository.saveAll(authorList);
-		log.info("{}",authorList.size());*/
 
 		//TITLE
 		log.info("BookTitle");
